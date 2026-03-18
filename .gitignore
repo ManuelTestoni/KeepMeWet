@@ -173,9 +173,48 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Cursor  
-#  Cursor is an AI-powered code editor.`.cursorignore` specifies files/directories to 
+# Cursor
+#  Cursor is an AI-powered code editor.`.cursorignore` specifies files/directories to
 #  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# KeepMeWet Project Specific
+# ==========================
+
+# Local environment files
+.env.local
+.env.*.local
+*.env
+
+# Data directories (keep structure, ignore content)
+data/logs/*
+data/db/*
+data/buffer/*
+data/ml_models/*
+data/datasets/*
+!data/**/.gitkeep
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Raspberry Pi specific
+*.gpio_lock
+
+# Sensor calibration data (may contain device-specific values)
+config/calibration_*.yaml
