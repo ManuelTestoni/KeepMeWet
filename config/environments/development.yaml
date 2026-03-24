@@ -1,0 +1,22 @@
+irrigation:
+  moisture_threshold: 450
+  watering_duration_seconds: 10
+
+monitoring:
+  # Thresholds for logging or future alerts
+  # Is the temperature too high or too low?
+  temperature_celsius:
+    min_safe: 15.0
+    max_safe: 30.0
+  
+  # Is the air too dry or too humid?
+  humidity_percent:
+    min_safe: 30.0
+    max_safe: 70.0
+
+  # Is there enough light? (in lux)
+  light_lux:
+    min_safe: 100.0
+
+# How often the main loop runs, in seconds
+main_loop_delay_seconds: 60
